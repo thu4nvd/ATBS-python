@@ -1,20 +1,14 @@
-#import sys
-#
-#while True:
-#    spam = input('Enter 1, 2 or something elese.')
-#    if spam == '1':
-#        print('Hello')
-#    elif spam == '2':
-#        print('Howdy')
-#    elif spam == '3':
-#        sys.exit('We exit...')
-#    else:
-#        print('Greetings!')
+#!/usr/bin/python3
+# use for testing
 
-#for i in range(1,11):
-#    print(i)
+import re
 
-i = 1
-while i <= 10:
-    print(i)
-    i += 1
+testRegex = re.compile(r'\bhttp[s]?://\w+[.]\S+\b')
+texts = [
+    "http://vnexpress.nett",
+    "thuan https://vietcombank.vn",
+    "http://lemonde.fr/7jours cai gi do",
+    "https://vietname.edu.vn"
+]
+for text in texts:
+    print(testRegex.search(text))

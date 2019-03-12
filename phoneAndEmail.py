@@ -1,19 +1,21 @@
 #!/usr/bin/python3
 # phoneAndEmail.py - Finds phone numbers and email addresses on the clipboard.
 
-import pyperclip, re, urllib2
+import pyperclip, re
+# import urllib2
 
-def getURL(url):
-    req = urllib2.Request(url, headers={'User-Agent' : "Magic Browser"})
-    text = urllib2.urlopen(req).read()
-    return text
+# def getURL(url):
+#     req = urllib2.Request(url, headers={'User-Agent' : "Magic Browser"})
+#     text = urllib2.urlopen(req).read()
+#     return text
 
 def main():
 #    url = 'https://www.nostarch.com/contactus.htm'
 #    text = getURL(url)
     text = pyperclip.paste()
 #    getContact('email', text)
-    getContact('phone', text)
+    # getContact('phone', text)
+    getContact('email', text)
 
 phoneRegex = re.compile(r'''
     \b                                  # boundary

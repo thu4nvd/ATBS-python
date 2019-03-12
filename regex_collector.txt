@@ -1,0 +1,31 @@
+********************
+phoneRegex = re.compile(r'''
+    \b                                  # boundary
+    (?:(\d{3})|\((\d{3})\))?            # area code
+    (?:\s|-|\.)?                        # separator
+    (\d{3})                             # first 3 digits
+    (?:\s|-|\.)?                        # separator
+    (\d{4})                             # last 4 digits
+    (?:\s*(ext|x|ext.)\s*(\d{2,5}))?    # extension
+    \b                                  # boundary
+    ''', re.VERBOSE | re.DOTALL)
+
+********************
+emailRegex = re.compile(r'''
+    \b                                  # boundary
+    ([A-Za-z][\w.]*?                    # name
+        @[A-Za-z][\w.]*?                # domain
+        (?:\.[A-Za-z]{2,3}){,2})        # top-level domain
+    (?:\s|-|;|,|\.)                     # boundary
+    ''', re.VERBOSE | re.DOTALL)
+
+********************
+urlRegex
+\bhttp[s]?://\w+[.]\S+\b
+********************
+dateRegex
+********************
+cleanupText
+********************
+
+

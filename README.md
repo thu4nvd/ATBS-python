@@ -4,12 +4,6 @@ Website: https://automatetheboringstuff.com/
 
 Table of Contents
 
-    Chapter 0 – Introduction
-    Chapter 1 – Python Basics
-    Chapter 2 – Flow Control
-    Chapter 3 – Functions
-    Chapter 4 – Lists
-    Chapter 5 – Dictionaries and Structuring Data
     Chapter 6 – Manipulating Strings
     Chapter 7 – Pattern Matching with Regular Expressions
     Chapter 8 – Reading and Writing Files
@@ -23,6 +17,10 @@ Table of Contents
     Chapter 16 – Sending Email and Text Messages
     Chapter 17 – Manipulating Images
     Chapter 18 – Controlling the Keyboard and Mouse with GUI Automation
-    Appendix A – Installing Third-Party Modules
-    Appendix B – Running Programs
-    Appendix C – Answers to the Practice Questions
+    
+Ideas:
+        Rename file of ebook to standar: name with space - name of author - things.mobi
+        Classifer massively book into folder, or tag ebook
+        Identify the language of ebook and tag them
+        find each 100 new word then push in vocabulary list -> create the Anki csv file
+
