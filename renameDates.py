@@ -16,7 +16,10 @@ datePattern = re.compile(r"""
     (.*?)$                      # all text before the date
     """, re.VERBOSE)
 
-current_dir = os.getcwd()
+# current_dir = os.getcwd()
+current_dir = "/tmp/python/"
+os.chdir(current_dir)
+
 # Loop over the files in the current directory recursively.
 for pathname, subdir, basename in os.walk(current_dir):
     # create list of tuples containing source and destination absolute pathes

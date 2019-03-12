@@ -7,13 +7,28 @@ import random
 pupil = 3
 
 # The quiz data . Keys are states and values are their capitals .
-capitals = {'Alabama':'Montgomery','Alaska':'Juneau','Arizona':'Phoenix','Arkansas':'LittleRock','California':'Sacramento','Colorado':'Denver','Connecticut':'Hartford','Delaware':'Dover','Florida':'Tallahassee','Georgia':'Atlanta','Hawaii':'Honolulu','Idaho':'Boise','Illinois':'Springfield','Indiana':'Indianapolis','Iowa':'DesMoines','Kansas':'Topeka','Kentucky':'Frankfort','Louisiana':'BatonRouge','Maine':'Augusta','Maryland':'Annapolis','Massachusetts':'Boston','Michigan':'Lansing','Minnesota':'SaintPaul','Mississippi':'Jackson','Missouri':'JeffersonCity','Montana':'Helena','Nebraska':'Lincoln','Nevada':'CarsonCity','NewHampshire':'Concord','NewJersey':'Trenton','NewMexico':'SantaFe','NewYork':'Albany','NorthCarolina':'Raleigh','NorthDakota':'Bismarck','Ohio':'Columbus','Oklahoma':'OklahomaCity','Oregon':'Salem','Pennsylvania':'Harrisburg','RhodeIsland':'Providence','SouthCarolina':'Columbia','SouthDakota':'Pierre','Tennessee':'Nashville','Texas':'Austin','Utah':'SaltLakeCity','Vermont':'Montpelier','Virginia':'Richmond','Washington':'Olympia','WestVirginia':'Charleston','Wisconsin':'Madison','Wyoming':'Cheyenne'}
+capitals = {'Alabama':'Montgomery','Alaska':'Juneau','Arizona':'Phoenix',
+'Arkansas':'LittleRock','California':'Sacramento','Colorado':'Denver',
+'Connecticut':'Hartford','Delaware':'Dover','Florida':'Tallahassee',
+'Georgia':'Atlanta','Hawaii':'Honolulu','Idaho':'Boise','Illinois':'Springfield',
+'Indiana':'Indianapolis','Iowa':'DesMoines','Kansas':'Topeka','Kentucky':'Frankfort',
+'Louisiana':'BatonRouge','Maine':'Augusta','Maryland':'Annapolis','Massachusetts':'Boston',
+'Michigan':'Lansing','Minnesota':'SaintPaul','Mississippi':'Jackson','Missouri':'JeffersonCity',
+'Montana':'Helena','Nebraska':'Lincoln','Nevada':'CarsonCity','NewHampshire':'Concord',
+'NewJersey':'Trenton','NewMexico':'SantaFe','NewYork':'Albany','NorthCarolina':'Raleigh',
+'NorthDakota':'Bismarck','Ohio':'Columbus','Oklahoma':'OklahomaCity','Oregon':'Salem',
+'Pennsylvania':'Harrisburg','RhodeIsland':'Providence','SouthCarolina':'Columbia',
+'SouthDakota':'Pierre','Tennessee':'Nashville','Texas':'Austin','Utah':'SaltLakeCity',
+'Vermont':'Montpelier','Virginia':'Richmond','Washington':'Olympia','WestVirginia':'Charleston',
+'Wisconsin':'Madison','Wyoming':'Cheyenne'}
+
+directory = '/tmp/'
 
 # Generate quiz files .
 for quizNum in range(pupil):
     # Create  the  quiz  and  answer  key  files .
-    quizFile = open('capitalsquiz%d.txt' % (quizNum + 1), 'w')
-    answerKeyFile = open('capitalsquiz_answers%d.txt' % (quizNum + 1), 'w')
+    quizFile = open(directory + 'capitalsquiz%d.txt' % (quizNum + 1), 'w')
+    answerKeyFile = open(directory + 'capitalsquiz_answers%d.txt' % (quizNum + 1), 'w')
 
     # write out the header for the quiz.
     quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
@@ -40,5 +55,5 @@ for quizNum in range(pupil):
         # Write the answer key to a file.
         answerKeyFile.write('%d. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
 
-quizFile.close()
-answerKeyFile.close()
+    quizFile.close()
+    answerKeyFile.close()

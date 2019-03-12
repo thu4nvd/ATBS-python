@@ -7,17 +7,28 @@
 
 import re, pyperclip
 
+
+lowerRegex = re.compile(r'^[^A-Z]*$')
+upperRegex = re.compile(r'^[^a-z]*$')
+nodigitRegex = re.compile(r'^[^0-9]*$')
+
+
 def check(pword):
-    criteria = [0] * 4
-    if len(pword) >= 8:
-        criteria[0] = 1
-    return criteria
+    result = []
+    if len(pword) <= 8:
+        result.append("Length smaller than 8")
+    if lowerRegex.match(pword):
+        result.append("Doesn't have UPPERCASE letter")
+    if upperRegex.match(pword):
+        result.append("Doesn't have lowercase letter")
+    if nodigitRegex.match(pword):
+        result.append("Doesn't have digit")
+    return "\n".join(result) if len(result) > 0 else str("Passed test")
+
 
 def main():
-    pwRegex = re.compile(r'''
-    \b
-    ''')
     pword = pyperclip.paste()
+    print("Password: ", pword)
     print(check(pword))
 
 

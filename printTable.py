@@ -30,6 +30,6 @@ def print_table(tableData):
         line = ''
         for item in range(len(row)):
             line += row[item].rjust(length[item] + 1)
-        print line
+        print(line)
 
 print_table(tableData)

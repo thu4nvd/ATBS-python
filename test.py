@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 # use for testing
 
-import re
+import os, glob
 
-testRegex = re.compile(r'\bhttp[s]?://\w+[.]\S+\b')
-texts = [
-    "http://vnexpress.nett",
-    "thuan https://vietcombank.vn",
-    "http://lemonde.fr/7jours cai gi do",
-    "https://vietname.edu.vn"
-]
-for text in texts:
-    print(testRegex.search(text))
+dirname = "/tmp/python"
+os.chdir(dirname)
+print(os.getcwd())
+
+for file in os.listdir():
+    if not os.path.isfile(file):
+        print(file)
