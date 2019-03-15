@@ -1,5 +1,8 @@
 #!/usr/bin/python
-
+__doc__='''
+    Khong biet script nay lam cai gi luon
+    '''
+    
 import sys, re, urllib2, string
 
 ident = 2 # set identation

@@ -6,16 +6,16 @@
 import os, sys
 from zipfile import ZipFile
 
-dir = '/home/iliya/repository/AutomateTheBoringStuffWithPython'
+workingDir = '/tmp/python/toZip'
 
-def main(dir):
-    folder = os.path.abspath(dir)
+def main(workingDir ):
+    folder = os.path.abspath(workingDir )
     backupToZip(folder)
 
 def backupToZip(folder):
     number = 1
     while True:
-        zipFileName = os.path.join(dir, os.path.basename(dir) + '_' + str(number) + '.zip')
+        zipFileName = os.path.join(os.path.dirname(folder), os.path.basename(folder) + '_' + str(number) + '.zip')
         if not os.path.exists(zipFileName):
             break
         number += 1
@@ -23,17 +23,17 @@ def backupToZip(folder):
     # Creating the ZIP file
     print('Creating %s... ' % zipFileName)
     with ZipFile(zipFileName, 'w') as backupZip:
-        for dirname, subdir, basename in os.walk(dir):
+        for dirname, _, basename in os.walk(workingDir ):
             print('Adding files in %s... ' % dirname)
             # Add the current folder to the ZIP file.
             backupZip.write(dirname)
             # Add all files in that folder to the ZIP file.
             for file in basename:
-                if file.startswith(os.path.basename(dir) + '_') and file.endswith('.zip'):
+                if file.startswith(os.path.basename(workingDir ) + '_') and file.endswith('.zip'):
                     continue # don't backup the backup ZIP file
                 backupZip.write(os.path.join(dirname, file))
         print('Done.')
         backupZip.close()
 
 if __name__ == '__main__':
-    main(dir)
+    main(workingDir )

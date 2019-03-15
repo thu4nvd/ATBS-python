@@ -17,10 +17,4 @@ Table of Contents
     Chapter 16 – Sending Email and Text Messages
     Chapter 17 – Manipulating Images
     Chapter 18 – Controlling the Keyboard and Mouse with GUI Automation
-    
-Ideas:
-        Rename file of ebook to standar: name with space - name of author - things.mobi
-        Classifer massively book into folder, or tag ebook
-        Identify the language of ebook and tag them
-        find each 100 new word then push in vocabulary list -> create the Anki csv file
 

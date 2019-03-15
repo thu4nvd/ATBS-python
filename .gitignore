@@ -1,0 +1,6 @@
+todo.bnmd
+*.bnmd
+__pycache__
+*bnmd*
+test*.py
+test*

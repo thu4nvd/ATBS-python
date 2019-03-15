@@ -1,6 +1,10 @@
 import sys
 
 
+def visualPrint(number):
+    print('|'*int(number))
+
+
 def collatz(number):
     if number % 2 == 0:
         result = number // 2
@@ -10,17 +14,20 @@ def collatz(number):
 
 
 number = input('Enter integer number:    ')
+
 try:
     number = float(number)
 except:
     sys.exit("The integer number is only accepted.")
 
 
-if (number).is_integer():
-    print(int(number))
+if (number).is_integer():   # attribute of float type
+    # print(int(number))
+    visualPrint(number)
     while number != 1:
         number = collatz(number)
-        print(number)
+        # print(number)
+        visualPrint(number)
 else:
     sys.exit("The integer number is only accepted.")
 

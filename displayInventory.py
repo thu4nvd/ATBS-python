@@ -16,15 +16,15 @@ dragonLoot = [
     'ruby'
     ]
 
-def displayInventory(Dictionary):
+def displayInventory(inventory):
     print('Inventory:')
-    for item, qty in Dictionary.items():
+    for item, qty in inventory.items():
         print('%d %s' % (qty, item))
-    total = sum(Dictionary.values())
+    total = sum(inventory.values())
     print('\nTotal number of items: %d' % total)
 
-def addToInventory(inventory, addedItems):
-    for item in addedItems:
+def addToInventory(inventory, items):
+    for item in items:
         inventory[item] = inventory.get(item, 0) + 1
     return inventory
 

@@ -77,7 +77,7 @@ for ind in range(len(json)):
 trantab = string.maketrans("'", ' ') # create translation table
 json = str(json).translate(trantab)
 
-print '{ ' + json.strip('[ ]') + '] }'
+print('{ ' + json.strip('[ ]') + '] }')
 
 ## print out to the file
 #with open('gett.json', 'w') as file:

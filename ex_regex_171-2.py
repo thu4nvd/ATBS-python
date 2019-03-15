@@ -2,16 +2,17 @@
 
 import re
 
-text = 'eeeWfdgff4fde'
-char = 'e'
+text = 'eWfdgeeff4fde'
+chars = 'edfW'
 
-def customStrip(text, char):
+
+def customStrip(text, chars):
     mo = re.compile(r'''
         ^
-        (?:%s)*(.*?)(?:%s)*
+        (?:[%s])*(.*?)(?:[%s])*
         $
-    ''' % (char, char), re.VERBOSE)
+    ''' % (chars, chars), re.VERBOSE)
     result = mo.sub(r'\1', text)
     return result
 
-print customStrip(text, char)
+print(customStrip(text, chars))

@@ -22,7 +22,7 @@ if __name__ == "__main__":
     
 # WhatNext
 # Apply to whatever modification of clipboard's content
-# Filter: filter for phone, url, keywords, etc..
+# Filter: filter for phone, url, object, etc..
 # Format: clean up data
 # Populate: generate whatis information of command
         # Refer database and retrieve infomation
