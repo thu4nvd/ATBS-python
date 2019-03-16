@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# an insecure password locker program
+# an INSECURE password locker program
 
 import sys, pyperclip
 

@@ -15,11 +15,4 @@ def bacon():
     global eggs
     eggs = 0
 
-#spam()
-
-def tam():
-#    x = 4
-    print(x)
-
-x = 5
-tam()
+spam()
