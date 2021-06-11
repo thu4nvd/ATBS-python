@@ -4,3 +4,6 @@ __pycache__
 *bnmd*
 test*.py
 test*
+*/.venv
+*\.venv
+.venv 
