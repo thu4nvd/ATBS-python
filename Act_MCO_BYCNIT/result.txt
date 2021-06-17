@@ -1,0 +1,20 @@
+https://www.itforbusiness.fr/home_bytech
+/t/t200https://bycn.my.salesforce.com
+/t/t200https://sso-bylearn.syfadis.com/
+/t/t200https://edossier.pontiss.ch/bycn.html
+/t/t200https://edossier.pontiss.ch/aconso/login/login2.jsp
+/t/t200https://ondemand.triskellsoftware.com/triskell/
+/t/t200https://byuk.pyx4.com/users/saml/metadata
+/t/t200https://login.microsoftonline.com
+/t/t200https://bouygues-construction.adequacy-corporate.com/
+/t/tHTTP Error 403: Forbiddenhttps://int-bycn.apps.legal-suite.com/galexy/
+/t/t200https://elamp.fr
+/t/t200https://travel.mycwt.com/
+/t/t200https://bouygues.dispatcher-pro.com/
+/t/t200https://optim-datafinance-ondemand.cegid.com/
+/t/t200https://bycn-ext.ivalua.app/
+/t/t200https://bycars.gac-technology.com/auth/login/app/grcf
+/t/t200https://byesmat.gac-technology.com/auth/login/app/grcf
+/t/t200https://bouyguesconstruction.apforensics.com/t/tHTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+Found
